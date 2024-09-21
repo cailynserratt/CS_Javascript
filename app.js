@@ -1,14 +1,40 @@
 document.write("Please press F12 and check the console!")
-var name = "Remaining Health Bar" // this is the name displayed - GLOBAL STRING
+const HP = 23;
+const healthPotion = 100;
+const potions = "0";
 
-const character = {model: "Male", HP: "1500", class: "Druid"} // this is the character description - OBJECT
+console.log(
+    `Hello Player! Your HP is currently at ${HP} and health potions restore ${healthPotion} HP! Have Fun!`
+)
 
-let life = 1500;  // this is the life bar - BLOCK NUMBER
+if (HP >= 50) {
+    console.log("Your HP is looking good!");
+} else if (HP < 25) {
+    console.log("Wow your HP is super low...take a health potion to heal...");
+} else {
+    console.log("Your HP could be better.")
+}
 
-life = life - 275; // character takes one hit, loses health
-life = life - 333; // character takes another hit, loses health
-life = life + 150; // character takes health potion, restores health
+const combined = HP + healthPotion;
+console.log("You took a health potion! " + combined + " is now your total HP!")
 
-console.log(character);
-console.log(name);
-console.log(life);
+switch (potions) {
+    case "0":
+        console.log("You have no potions left!");
+      break;
+    case "1":
+        console.log("You have 1 potions left!");
+      break;
+    case "2":
+        console.log("You have 2 potions left!");
+      break;
+    case "3":
+        console.log("You have 3 potions left!");
+      break;
+    case "4":
+        console.log("You have more than 3 potions left!");
+      break;
+    default:
+        console.log("This is your potion stock!")
+        break;
+  }
