@@ -1,4 +1,4 @@
-document.write("Please press F12 and check the console!")
+document.write("Please press F12 and check the console for a small game!")
 const HP = 23;
 const healthPotion = 100;
 const potions = "0";
